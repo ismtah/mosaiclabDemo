@@ -30,7 +30,7 @@ public class ProductController {
             @RequestParam(defaultValue = "10") int pageSize
     ){
         List products = productService.getProducts(pageNumber, pageSize);
-        return new ResponseEntity(products, new HttpHeaders(), HttpStatus.OK);
+        return new ResponseEntity(products, HttpStatus.OK);
     }
 
     @PostMapping(value = "add")
